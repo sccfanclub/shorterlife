@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Field, reduxForm} from 'redux-form';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="column">
           <h2 className="ui teal image header">
             <div className="content">
-              wefiwefoijwfe
+              短连接后台
             </div>
           </h2>
           <div className="App">
@@ -18,13 +18,13 @@ class App extends Component {
                 <div className="field">
                   <div className="ui left icon input">
                     <i className="user icon"/>
-                    <input type="text" name="email" placeholder="E-mail address"/>
+                    <Field type="text" component="input" name="username" placeholder="用户名"/>
                   </div>
                 </div>
                 <div className="field">
                   <div className="ui left icon input">
                     <i className="lock icon"/>
-                    <input type="password" name="password" placeholder="Password"/>
+                    <Field type="password" component="input" name="password" placeholder="密码"/>
                   </div>
                 </div>
                 <div className="ui fluid large teal submit button">Login</div>
@@ -38,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default reduxForm({form: 'login'})(App);
