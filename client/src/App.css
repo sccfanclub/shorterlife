@@ -1,0 +1,13 @@
+body {
+    background-color: #DADADA;
+}
+#root > .grid {
+    height: 100% !important ;
+    margin-top: 10rem;
+}
+.image {
+    margin-top: -100px;
+}
+.column {
+    max-width: 450px;
+}
